@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 export const HeaderMenu = (props:  {menuItems: Array<string>} ) => {
     return (
         <StyledHeaderMenu>
@@ -25,7 +24,7 @@ const StyledHeaderMenu = styled.nav`
     ul {
         display: flex;
         gap: 30px;
-        justify-content: end;
+        justify-content: flex-end;
     }
 `
 const Item = styled.li`
@@ -35,6 +34,7 @@ const Link = styled.a`
     font-family: "Inter", sans-serif;
     font-size: 12px;
     font-weight: 400;
+    text-transform: uppercase;
 `
 const Span = styled.span`
 

@@ -32,11 +32,4 @@ export const GlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
-
-
-    p {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.4;
-    }
 `
