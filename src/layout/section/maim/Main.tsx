@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
 import photo from "../../../img/pictures/man.png"
-
+import buzzfeed from "../../../img/logo/buzzfeed.svg"
+import DW from "../../../img/logo/DW.svg"
+import ESPRIT from "../../../img/logo/ESPRIT.svg"
+import huffpost from "../../../img/logo/huffpost.svg"
+import NG from "../../../img/logo/NG.svg"
+import nike from "../../../img/logo/nike.svg"
 
 export const Main = () => {
     return (
@@ -11,7 +16,18 @@ export const Main = () => {
                 <Desc>A huge selection of health and fitness content, healthy recipes and transformation stories to help
                     you get fit and stay fit!</Desc>
                 <Button>Join Club Now!</Button>
-                    <Photo src={photo} alt="" />
+                <Photo src={photo} alt=""/>
+                <LogoBox>
+                    <Span>AS FEATURED IN</Span>
+                    <LogoWrapper>
+                        <Img src={nike} alt="nike"/>
+                        <Img src={buzzfeed} alt="buzzfeed"/>
+                        <Img src={ESPRIT} alt="ESPRIT"/>
+                        <Img src={NG} alt="NG"/>
+                        <Img src={DW} alt="DW"/>
+                        <Img src={huffpost} alt="huffpost"/>
+                    </LogoWrapper>
+                </LogoBox>
             </MainWrapper>
         </Container>
 
@@ -31,21 +47,21 @@ const MainTitle = styled.h1`
     font-size: 172px;
     line-height: 1;
     text-transform: uppercase;
-    //background: linear-gradient(90deg, #000, #fff, #000);
-    //background-size: 400% 400%;
-    //-webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
-    //animation: gradient 15s ease infinite;
-    //@keyframes gradient {
-    //    0% {
-    //        background-position: 0% 50%;
-    //    }
-    //    50% {
-    //        background-position: 100% 50%;
-    //    }
-    //    100% {
-    //        background-position: 0% 50%;
-    //    }
+    background: linear-gradient(90deg, #000, #fff, #000);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 15s ease infinite;
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
 `
 
 const Desc = styled.p`
@@ -71,4 +87,26 @@ const Photo = styled.img`
     max-width: 409px;
     max-height: 684px;
     z-index: 1;
+`
+const LogoBox = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+`
+const Span = styled.span`
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    text-transform: uppercase;
+    opacity: 0.5;
+`
+
+const LogoWrapper = styled.div`
+    display: flex;
+    gap: 18px;
+    max-width: 600px;
+`
+
+const Img = styled.img`
+
+
 `

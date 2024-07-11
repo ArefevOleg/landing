@@ -1,10 +1,11 @@
-import React from 'react';
+import styled from "styled-components";
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/section/maim/Main";
+import v from "./video/workout.mp4"
 
 function App() {
     return (
-        <div className="App">
+        <div>
             <Header/>
             <Main/>
         </div>
