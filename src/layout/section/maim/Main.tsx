@@ -47,21 +47,21 @@ const MainTitle = styled.h1`
     font-size: 172px;
     line-height: 1;
     text-transform: uppercase;
-    background: linear-gradient(90deg, #000, #fff, #000);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: gradient 15s ease infinite;
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+    //background: linear-gradient(90deg, #000, #fff, #000);
+    //background-size: 400% 400%;
+    //-webkit-background-clip: text;
+    //-webkit-text-fill-color: transparent;
+    //animation: gradient 15s ease infinite;
+    //@keyframes gradient {
+    //    0% {
+    //        background-position: 0% 50%;
+    //    }
+    //    50% {
+    //        background-position: 100% 50%;
+    //    }
+    //    100% {
+    //        background-position: 0% 50%;
+    //    }
 `
 
 const Desc = styled.p`

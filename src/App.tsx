@@ -1,13 +1,13 @@
-import styled from "styled-components";
 import {Header} from "./layout/header/Header";
 import {Main} from "./layout/section/maim/Main";
-import v from "./video/workout.mp4"
+import {Programs} from "./layout/section/programs/Programs";
 
 function App() {
     return (
         <div>
             <Header/>
             <Main/>
+            <Programs/>
         </div>
     );
 }
