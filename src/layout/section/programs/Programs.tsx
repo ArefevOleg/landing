@@ -16,8 +16,8 @@ const arrayCard: CardType[] = [
 
 export const Programs = () => {
     return (
-        <ProgramsWrapper>
             <Container>
+                <ProgramsWrapper>
                 <Descr>
                     <MainTitle>Not sure where to start?</MainTitle>
                     <Parag>Programs offer day-to-day guidance on an interactive calendar to keep you on track.</Parag>
@@ -25,18 +25,22 @@ export const Programs = () => {
                 <BoxCard>
                     {arrayCard.map((card, index) => {
                         return <Card key={index}>
-                            <span>{card.title}</span>
-                            <p>{card.description}</p>
+                            <Title>{card.title}</Title>
+                            <Description>{card.description}</Description>
                         </Card>
                     })}
                 </BoxCard>
+                </ProgramsWrapper>
             </Container>
-        </ProgramsWrapper>
     );
 };
 
 const ProgramsWrapper = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 100px 0 95px 141px;
+    max-height: 338px;
 `
 
 const Descr = styled.div`
@@ -46,15 +50,33 @@ const Descr = styled.div`
 `
 const MainTitle = styled.h3`
     font-size: 48px;
+    font-weight: 500;
 `
 const Parag = styled.p`
-    font-size: 14px;
+    font-size: 16px;
     opacity: 0.5;
 `
 
 const BoxCard = styled.div`
+    display: flex;
+    gap: 32px;
 
 `
 const Card = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 304px;
+    max-height: 190px;
+    padding: 52px 72px 52px 40px;
+    background-color: rgba(50, 52, 67, 1);
+    border-radius: 10px;
+`
+const Title = styled.span`
+    font-size: 18px;
+`
 
+const Description = styled.p`
+    font-size: 14px;
+    opacity: 0.5;
 `

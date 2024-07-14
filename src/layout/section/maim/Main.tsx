@@ -8,6 +8,8 @@ import huffpost from "../../../img/logo/huffpost.svg"
 import NG from "../../../img/logo/NG.svg"
 import nike from "../../../img/logo/nike.svg"
 
+const img = [nike,buzzfeed,ESPRIT,NG,DW,huffpost]
+
 export const Main = () => {
     return (
         <Container>
@@ -20,12 +22,7 @@ export const Main = () => {
                 <LogoBox>
                     <Span>AS FEATURED IN</Span>
                     <LogoWrapper>
-                        <Img src={nike} alt="nike"/>
-                        <Img src={buzzfeed} alt="buzzfeed"/>
-                        <Img src={ESPRIT} alt="ESPRIT"/>
-                        <Img src={NG} alt="NG"/>
-                        <Img src={DW} alt="DW"/>
-                        <Img src={huffpost} alt="huffpost"/>
+                        {img.map(el => {return <Img src={el} alt=""/>})}
                     </LogoWrapper>
                 </LogoBox>
             </MainWrapper>
