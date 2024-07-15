@@ -71,6 +71,14 @@ const Card = styled.div`
     padding: 52px 72px 52px 40px;
     background-color: rgba(50, 52, 67, 1);
     border-radius: 10px;
+
+    &:nth-child(2) {
+        background-color: rgba(35, 37, 50, 1);
+    }
+
+    &:nth-child(4) {
+        background-color: rgba(79, 82, 97, 1);
+    }
 `
 const Title = styled.span`
     font-size: 18px;

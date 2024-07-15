@@ -27,7 +27,6 @@ export const Main = () => {
                 </LogoBox>
             </MainWrapper>
         </Container>
-
     );
 };
 
