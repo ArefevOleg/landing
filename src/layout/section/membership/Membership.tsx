@@ -16,9 +16,70 @@ const data = [
 export const Membership = () => {
     return (
         <Container>
-            <h2></h2>
-
+            <MainTitle>Membership</MainTitle>
+            <MembershipWrapper>
+                {data.map((el, index) => {
+                    return (
+                        <FlexWrapper key={index}>
+                            <Title>{el.title}</Title>
+                            <Description>{el.description}</Description>
+                            <ListWrapper>
+                                {el.list.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ListWrapper>
+                        </FlexWrapper>
+                    )
+                })}
+            </MembershipWrapper>
         </Container>
     );
 };
 
+const MembershipWrapper = styled.div`
+    display: flex;
+    justify-content: space-between;
+    max-width: 1155px;
+    max-height: 767px;
+    margin: 77px 142px 100px 142px;
+`
+
+const MainTitle = styled.h2`
+    font-size: 50px;
+    margin-left: 141px;
+`
+
+const FlexWrapper = styled.div`
+    padding: 71px 68px 77px 68px;
+    display: flex;
+    flex-direction: column;
+    max-width: 538px;
+    max-height: 640px;
+    background-color: rgba(35, 37, 50, 1);
+    
+    &:last-child {
+        background-color: rgba(50, 52, 67, 1);
+    }
+`
+
+const Title = styled.h3`
+    font-size: 46px;
+    text-align: center;
+    margin-bottom: 34px;
+`
+
+const Description = styled.p`
+    max-width: 402px;
+    max-height: 96px;
+    font-size: 18px;
+    opacity: 0.5;
+    margin-bottom: 16px;
+`
+
+const ListWrapper = styled.ul`
+    list-style-position: inside;
+    padding-left: 20px;
+    font-size: 18px;
+    opacity: 0.5;
+    line-height: 1.3;
+`
