@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import {Container} from "../../../components/container/Container";
+import {UniversalButton} from "../../../components/button/Button";
+
 
 const data = [
     {
@@ -25,9 +27,10 @@ export const Membership = () => {
                             <Description>{el.description}</Description>
                             <ListWrapper>
                                 {el.list.map((item, i) => (
-                                    <li key={i}>{item}</li>
+                                    <Item key={i}>{item}</Item>
                                 ))}
                             </ListWrapper>
+                            <UniversalButton backgroundColor="red" color="white" padding="15px 30px">Click me</UniversalButton>
                         </FlexWrapper>
                     )
                 })}
@@ -82,4 +85,9 @@ const ListWrapper = styled.ul`
     font-size: 18px;
     opacity: 0.5;
     line-height: 1.3;
+    
+`
+
+const Item = styled.li`
+    list-style-type: disc;
 `
