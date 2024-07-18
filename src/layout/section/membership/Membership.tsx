@@ -30,7 +30,12 @@ export const Membership = () => {
                                     <Item key={i}>{item}</Item>
                                 ))}
                             </ListWrapper>
-                            <UniversalButton backgroundColor="red" color="white" padding="15px 30px">Click me</UniversalButton>
+                            <UniversalButton
+                                onClick={()=>{}}
+                                backgroundColor="red"
+                                color="white"
+                                width="200px"
+                                padding="15px 30px">Click me</UniversalButton>
                         </FlexWrapper>
                     )
                 })}
@@ -77,6 +82,7 @@ const Description = styled.p`
     font-size: 18px;
     opacity: 0.5;
     margin-bottom: 16px;
+    outline: 1px solid darkred;
 `
 
 const ListWrapper = styled.ul`
@@ -85,7 +91,7 @@ const ListWrapper = styled.ul`
     font-size: 18px;
     opacity: 0.5;
     line-height: 1.3;
-    
+    outline: 1px solid darkgreen;
 `
 
 const Item = styled.li`

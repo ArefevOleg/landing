@@ -32,4 +32,9 @@ export const GlobalStyle = createGlobalStyle`
     ul {
         list-style: none;
     }
+    
+    button {
+        margin: 0;
+    }
+    
 `

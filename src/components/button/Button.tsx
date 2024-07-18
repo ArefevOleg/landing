@@ -9,24 +9,33 @@ type ButtonPropsType = {
     color?: string
     hoverBackgroundColor?: string
     children?: React.ReactNode;
+    margin?: number
+    onClick: () => void
+    width?: string;
 }
 
 
 const Button = styled.button<ButtonPropsType>`
-  background-color: ${props => props.backgroundColor || 'blue'};
-  color: ${props => props.color || 'white'};
-  padding: ${props => props.padding || '10px 20px'};
-  border: none;
-  border-radius: ${props => props.borderRadius || '5px'};
-  cursor: pointer;
-  font-size: ${props => props.fontSize || '16px'};
-  transition: background-color 0.3s ease;
+    display: inline-block;
+    background-color: ${props => props.backgroundColor || 'blue'};
+    color: ${props => props.color || 'white'};
+    padding: ${props => props.padding || '5px 5px'};
+    margin: ${props => props.margin || '10px 10px'};
+    border: none;
+    border-radius: ${props => props.borderRadius || '5px'};
+    cursor: pointer;
+    font-size: ${props => props.fontSize || '16px'};
+    transition: background-color 0.3s ease;
+    width: ${props => props.width || 'auto'};
 
-  &:hover {
-    background-color: ${props => props.hoverBackgroundColor || 'darkblue'};
-  }
+    &:hover {
+        background-color: ${props => props.hoverBackgroundColor || 'darkblue'};
+    }
 `;
 
-export const UniversalButton = ({ children, ...props }: ButtonPropsType) => {
-    return <Button {...props}>{children}</Button>;
+export const UniversalButton = ({ children,onClick, ...props }: ButtonPropsType) => {
+    const onClickHandler = () => {
+        onClick()
+    }
+    return <Button onClick={onClickHandler} {...props}>{children}</Button>;
 };
