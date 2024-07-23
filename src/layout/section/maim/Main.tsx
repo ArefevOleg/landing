@@ -20,15 +20,13 @@ export const Main = () => {
                 <Desc>A huge selection of health and fitness content, healthy recipes and transformation stories to help
                     you get fit and stay fit!</Desc>
                 <Button>Join Club Now!</Button>
-                <Photo src={photo} alt=""/>
-                <LogoBox>
-                    <Span>AS FEATURED IN</Span>
+                <Span>AS FEATURED IN</Span>
+                    <Photo src={photo} alt=""/>
                     <LogoWrapper>
                         {img.map(el => {
                             return <Img src={el} alt=""/>
                         })}
                     </LogoWrapper>
-                </LogoBox>
             </MainWrapper>
         </Container>
     );
@@ -40,22 +38,30 @@ const MainWrapper = styled.div`
     flex-direction: column;
     gap: 48px;
     margin: 130px 44px 100px 141px;
-    height: 741px;
-    outline: 1px solid #ffe200;
+    max-height: 741px;
 
-    @media ${theme.media.tablet} {
-        margin-left: 0;
-        margin-right: 0;
+    @media (max-width: 1100px) {
+        margin: 20px;
+    }
+
+    @media (max-width: 1000px) {
+        padding-bottom: 0;
     }
 `
 
 const MainTitle = styled.h1`
-    font-size: calc((100vw - 360px) / (1440 - 360) * (172 - 25) + 25px);
-    font-weight: 800;
+    padding-top: 0;
+    font-size: 172px;
+    font-weight: 700;
     text-transform: uppercase;
+    line-height: 1;
     
-    @media (width >= 1440px) {
-        font-size: 172px;
+    @media (width <= 1440px) {
+        font-size: calc((100vw - 360px) / (1440 - 360) * (172 - 25) + 25px);
+    }
+
+    @media (max-width: 1100px) {
+        font-size: calc((100vw - 360px) / (1100 - 360) * (172 - 25) + 25px);
     }
 `
 
@@ -76,24 +82,26 @@ const Button = styled.button`
 `
 
 const Photo = styled.img`
+    max-width: 409px;
+    width: 33%;
     position: absolute;
-    bottom: 0;
-    right: 85px;
+    top: 55px;
+    right: 8%;
     z-index: 1;
     
-    max-width: 409px;
-    width: 100%;
-    height: 684px;
-    object-fit: cover;
+    @media (max-width: 1260px) {
+        right: 45px;
+    }
 
-    //max-width: 100%;
-    //height: auto;
+    @media (max-width: 1100px) {
+        right: 0;
+    }
+
+    @media (max-width: 860px) {
+        right: 0;
+    }
 `
-const LogoBox = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 33px;
-`
+
 const Span = styled.span`
     font-size: 14px;
     font-family: "Inter", sans-serif;
@@ -105,6 +113,11 @@ const LogoWrapper = styled.div`
     display: flex;
     gap: 18px;
     max-width: 600px;
+    width: 100%;
+
+    @media (max-width: 920px) {
+        
+    }
 `
 
 const Img = styled.img`
