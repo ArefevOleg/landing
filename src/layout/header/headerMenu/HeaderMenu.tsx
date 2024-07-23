@@ -35,6 +35,7 @@ const Link = styled.a`
     font-size: 12px;
     font-weight: 400;
     text-transform: uppercase;
+
 `
 const Span = styled.span`
 

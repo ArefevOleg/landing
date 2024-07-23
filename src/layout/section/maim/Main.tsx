@@ -7,8 +7,10 @@ import ESPRIT from "../../../img/logo/ESPRIT.svg"
 import huffpost from "../../../img/logo/huffpost.svg"
 import NG from "../../../img/logo/NG.svg"
 import nike from "../../../img/logo/nike.svg"
+import {font} from "../../../styles/Common";
+import {theme} from "../../../styles/Theme";
 
-const img = [nike,buzzfeed,ESPRIT,NG,DW,huffpost]
+const img = [nike, buzzfeed, ESPRIT, NG, DW, huffpost]
 
 export const Main = () => {
     return (
@@ -22,7 +24,9 @@ export const Main = () => {
                 <LogoBox>
                     <Span>AS FEATURED IN</Span>
                     <LogoWrapper>
-                        {img.map(el => {return <Img src={el} alt=""/>})}
+                        {img.map(el => {
+                            return <Img src={el} alt=""/>
+                        })}
                     </LogoWrapper>
                 </LogoBox>
             </MainWrapper>
@@ -37,31 +41,26 @@ const MainWrapper = styled.div`
     gap: 48px;
     margin: 130px 44px 100px 141px;
     height: 741px;
+    outline: 1px solid #ffe200;
+
+    @media ${theme.media.tablet} {
+        margin-left: 0;
+        margin-right: 0;
+    }
 `
 
 const MainTitle = styled.h1`
-    font-size: 172px;
-    line-height: 1;
+    font-size: calc((100vw - 360px) / (1440 - 360) * (172 - 25) + 25px);
+    font-weight: 800;
     text-transform: uppercase;
-    //background: linear-gradient(90deg, #000, #fff, #000);
-    //background-size: 400% 400%;
-    //-webkit-background-clip: text;
-    //-webkit-text-fill-color: transparent;
-    //animation: gradient 15s ease infinite;
-    //@keyframes gradient {
-    //    0% {
-    //        background-position: 0% 50%;
-    //    }
-    //    50% {
-    //        background-position: 100% 50%;
-    //    }
-    //    100% {
-    //        background-position: 0% 50%;
-    //    }
+    
+    @media (width >= 1440px) {
+        font-size: 172px;
+    }
 `
 
 const Desc = styled.p`
-    font-size: 16px;
+    font-size: calc((100vw - 360px) / (1440 - 360) * (16 - 14) + 14px);
     opacity: 0.5;
     max-width: 560px;
 `
@@ -79,10 +78,16 @@ const Button = styled.button`
 const Photo = styled.img`
     position: absolute;
     bottom: 0;
-    right: 110px;
-    max-width: 409px;
-    max-height: 684px;
+    right: 85px;
     z-index: 1;
+    
+    max-width: 409px;
+    width: 100%;
+    height: 684px;
+    object-fit: cover;
+
+    //max-width: 100%;
+    //height: auto;
 `
 const LogoBox = styled.div`
     display: flex;

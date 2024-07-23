@@ -9,7 +9,9 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
     }
 
-
+html {
+    font-size: 10px;
+}
     body {
         margin: 0;
         font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
