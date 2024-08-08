@@ -60,6 +60,7 @@ const Desc = styled.p`
     font-size: calc((100vw - 360px) / (1440 - 360) * (16 - 14) + 14px);
     opacity: 0.5;
     max-width: 560px;
+    margin-bottom: 33px;
 `
 
 const Photo = styled.img`
