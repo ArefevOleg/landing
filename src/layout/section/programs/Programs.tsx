@@ -40,7 +40,10 @@ const ProgramsWrapper = styled.div`
     flex-direction: column;
     gap: 50px;
     margin: 100px 0 95px 141px;
-    max-height: 338px;
+    
+    @media (max-width: 1100px) {
+        margin: 20px;
+    }
 `
 
 const Descr = styled.div`
@@ -51,6 +54,10 @@ const Descr = styled.div`
 const MainTitle = styled.h3`
     font-size: 48px;
     font-weight: 500;
+    
+    @media (max-width: 700px) {
+        font-size: calc((100vw - 360px) / (1440 - 360) * (48 - 36) + 36px);
+    }
 `
 const Parag = styled.p`
     font-size: 16px;
@@ -59,18 +66,23 @@ const Parag = styled.p`
 
 const BoxCard = styled.div`
     display: flex;
-    gap: 32px;
-
+    gap: 25px;
+   
+    @media (max-width: 1100px) {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `
 const Card = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 304px;
+    width: calc(50% - 12.5px);
     max-height: 190px;
     padding: 52px 72px 52px 40px;
     background-color: rgba(50, 52, 67, 1);
     border-radius: 10px;
+    flex-grow: 1;
 
     &:nth-child(2) {
         background-color: rgba(35, 37, 50, 1);
@@ -79,6 +91,11 @@ const Card = styled.div`
     &:nth-child(4) {
         background-color: rgba(79, 82, 97, 1);
     }
+
+    @media (max-width: 1200px) {
+        padding: 40px;
+    }
+    
 `
 const Title = styled.span`
     font-size: 18px;

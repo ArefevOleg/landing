@@ -52,24 +52,23 @@ const DescriptionWrap = styled.div`
     max-width: 1312px;
     max-height: 1170px;
     margin: 95px 64px 100px 64px;
+    outline: 1px solid #fccb00;
 `
 
 const Block = styled.div`
     display: flex;
     gap: 69px;
-    margin-left: 64px;
-    //outline: 1px solid blue;
+    margin-left: 77px;
+    outline: 1px solid blue;
     justify-content: space-between;
-    width: 1235px;
-    height: 539px;
+    height: auto;
     
     &:last-child {
         gap: 89px;
-        width: 1240px;
-        height: 510px;
+        height: auto;
         flex-direction: row-reverse;
         margin-left: 0;
-        margin-right: 136px;
+        margin-right: 72px;
     }
 `
 
@@ -78,25 +77,34 @@ const Box = styled.div`
     flex-direction: column;
     justify-content: center;
     gap: 38px;
+    max-width: 100%;
+    max-height: 539px;
+    height: auto;
 `
 
 const Descr = styled.p`
     font-size: 14px;
     opacity: 0.5;
-    width: 480px;
-    height: 120px;
+    max-width: 480px;
+    max-height: 120px;
     
     &:last-child {
-        width: 523px;
+        max-width: 523px;
     }
 `
 
 const Title = styled.h3`
     font-size: 48px;
-`;
 
+    @media (width < 1440px) {
+        font-size: calc((100vw - 360px) / (1440 - 360) * (48 - 16) + 16px);
+    }
+`
 
 const Img = styled.img`
     max-width: 640px;
-    max-height: 539px;
+    width: 53%;
+    max-height: 540px;
+    height: auto;
+    object-fit: contain;
 `

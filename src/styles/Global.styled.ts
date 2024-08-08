@@ -36,7 +36,7 @@ html {
     }
     
     button {
-        margin: 0;
+        margin: 0
     }
     
 `
