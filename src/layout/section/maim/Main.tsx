@@ -49,7 +49,7 @@ const MainTitle = styled.h1`
     font-weight: 700;
     text-transform: uppercase;
     line-height: 1;
-    margin-bottom: 3.2vw;
+    margin-bottom: 46px;
     
     @media (width <= 1440px) {
         font-size: calc((100vw - 360px) / (1440 - 360) * (172 - 25) + 25px);
@@ -57,10 +57,12 @@ const MainTitle = styled.h1`
 `
 
 const Desc = styled.p`
-    font-size: calc((100vw - 360px) / (1440 - 360) * (16 - 14) + 14px);
+    font-size: 16px;
     opacity: 0.5;
+    height: 48px;
+    max-height: 48px;
     max-width: 560px;
-    margin-bottom: 33px;
+    margin-bottom: 50px;
 `
 
 const Photo = styled.img`
@@ -77,6 +79,8 @@ const Span = styled.span`
     font-family: "Inter", sans-serif;
     text-transform: uppercase;
     opacity: 0.5;
+    margin-top: 112px;
+    margin-bottom: 33px;
 `
 
 const LogoWrapper = styled.div`
